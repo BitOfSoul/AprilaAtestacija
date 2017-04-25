@@ -14,7 +14,6 @@
 			<aside class="col-sm-3"></aside>
 			<main class="col-sm-6">
 				<div class="form-horizontal" id="login">
-					<form action="event" method="post" id="eventForm">
 						 <fieldset>
 						 	<legend class="login_legend">Login</legend>
 							<div class="row">
@@ -38,7 +37,6 @@
 						<div>
 							<p>Don't have an account? <a href="/E:/Lanx/HTML/HTML/registration.html">Then register now!</a>
 						</div>
-					</form>
 				</div>
 			</main>
 			<aside class="col-sm-3"></aside>
