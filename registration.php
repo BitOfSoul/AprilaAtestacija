@@ -28,13 +28,13 @@
 								<div class="form-group">
 									<label class="col-sm-3 control-label login_form" for="password">Password:</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control" id="password" placeholder="Password" name="password"/>
+										<input type="password" class="form-control" id="password" placeholder="Password" name="password"/>
 									</div>
 								</div>
 								<div class="form-group">
 	                				<label class="col-sm-3 control-label login_form" for="passwordAgain">Rety your password:</label>
 	             					<div class="col-sm-9">
-	               						<input type="text" name="passwordAgain" class="form-control" id="passwordAgain">
+	               						<input type="password" name="passwordAgain" class="form-control" id="passwordAgain">
 	              					</div>
 	            				</div>
 								<div class="form-group">
