@@ -14,6 +14,7 @@
 				<aside class="col-sm-3"></aside>
 				<main class="col-sm-6">
 					<div class="form-horizontal" id="login">
+						<form method="post" id="eventForm">
 							 <fieldset>
 							 	<legend class="login_legend">Registration</legend>
 								<div class="row">
@@ -60,6 +61,7 @@
 							<div class="button">
 								<button type="button" class="btn btn-success" id="send">Register</button>
 							</div>
+						</form>
 					</div>
 				</main>
 				<aside class="col-sm-3"></aside>
