@@ -23,7 +23,7 @@
 		if(isset($_GET['idArticles'])){
 			$test = $_GET['idArticles'];	
 			$result = mysqli_query($main->construct(),"DELETE FROM articles WHERE idArticles = $test");
-			
+			header("location:delete.php");
 		}
 
 }

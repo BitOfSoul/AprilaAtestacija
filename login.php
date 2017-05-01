@@ -1,6 +1,6 @@
 <?php
-include("assets/php/config.php");
-include("assets/php/login_check.php");
+include("./assets/php/config.php");
+include("./assets/php/login_check.php");
 session_start();
 if(isset($_SESSION['login']))
 { header("location:index.php"); }

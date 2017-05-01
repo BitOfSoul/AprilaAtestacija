@@ -1,5 +1,5 @@
 <?php
-include("assets/php/config.php");
+include("./assets/php/config.php");
 $main = new DB_class();
 $main->construct();
 $main->check();
@@ -78,24 +78,35 @@ if(isset($_SESSION['login']))
 					<?php
 					$i=0;
 					if(isset($_POST["save"])){
-					if($_POST['Password'] == $_POST['PasswordAgain']){
+					if($_POST['Password'] == $_POST['PasswordAgain']){	
+								$sql = 'SELECT * 
+							    FROM user 
+							    WHERE Login = "' . $_POST['Login'] . '"';
+								$query = mysqli_query($main->construct(), $sql);
+								$count = mysqli_num_rows($query);
+							if ($count>0){
+
+								echo 'Sorry! This Username already exists!.';
+								
+
+								
+							}
+							else{
 
 								$name =  mysqli_real_escape_string($main->construct(),$_POST["Name"]); 
 								$surname =  mysqli_real_escape_string($main->construct(),$_POST["Surname"]); 
 								$login = mysqli_real_escape_string($main->construct(),$_POST["Login"]); 
 								$email = mysqli_real_escape_string($main->construct(),$_POST["Email"]); 
 								$password = md5(mysqli_real_escape_string($main->construct(),$_POST["Password"])); 
-								//infromācijas saglabāšana datu bāzē
 									$query = "INSERT INTO user (Login, Password, Name, Surname, Email,Date) 
 									VALUES ('$login', '$password','$name', '$surname','$email',Now())";
 								$result = mysqli_query($main->construct(),$query);
 								
 								header("location:login.php");
-
-								
 							}
+}
 						else {
-							echo "Paroles nesakrīt, lūdzu ievadiet nepieciešamo informāciju vēlreiz!";
+							echo "Pass1 not equal Pass2";
 						}
 					}
 

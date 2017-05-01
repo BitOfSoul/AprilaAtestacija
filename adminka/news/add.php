@@ -104,6 +104,16 @@ if(($_SESSION['login']) != "men300")
 				  <textarea class="form-control" rows="5" name="Content"></textarea>
 				</div>
 				<br>
+				<label for="Category">Category:</label>
+
+
+				<div class="radio">
+				  <label><input type="radio" name="optradio" value="1">WoW</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optradio" value="2">LoL</label>
+				</div>
+				<br>
 				<button type="submit" class="btn btn-primary btn-lg" name="go_add_news">ADD</button>
 
 
