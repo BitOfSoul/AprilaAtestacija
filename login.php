@@ -1,9 +1,26 @@
+<?php
+include("assets/php/config.php");
+include("assets/php/login_check.php");
+session_start();
+if(isset($_SESSION['login']))
+{ header("location:index.php"); }
+
+$main = new DB_class();
+$main->construct();
+$main->check();
+
+
+?>
+
+
+<!DOCTYPE html>
 <html lang = "en">
 	<head>
 	<meta charset="utf-8">
 	<meta name="viewpoint" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href = "css/bootstrap.min.css">
-	<lenk rel="styleshhet" href = "./css/css.css">
+	<link rel="stylesheet" href = "assets/css/bootstrap.min.css">
+	<link rel="styleshhet" href = "assets/css/css.css">
+	<title>Login</title>
 	</head>
 	<body>
 	<section class="container-fluid">
@@ -14,7 +31,7 @@
 			<aside class="col-sm-3"></aside>
 			<main class="col-sm-6">
 				<div class="form-horizontal" id="login">
-					<form action="event" method="post" id="eventForm">
+					<form method="post" id="eventForm">
 						 <fieldset>
 						 	<legend class="login_legend">Login</legend>
 							<div class="row">
@@ -28,17 +45,23 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label login_form" for="password">Password:</label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="password" placeholder="Password" name="password"/>
+									<input type="password" class="form-control" id="password" placeholder="Password" name="password"/>
 								</div>
 							</div>
 						</fieldset>
 						<div class="button">
-							<button type="button" class="btn btn-success" id="send">Login</button>
+							<button type="submit" name="loginbutton"class="btn btn-success" id="send">Login</button>
 						</div>
 						<div>
-							<p>Don't have an account? <a href="/E:/Lanx/HTML/HTML/registration.html">Then register now!</a>
+							<p>Don't have an account? <a href="./registration.php">Then register now!</a>
 						</div>
 					</form>
+					
+					<?php
+					if(isset($_POST["loginbutton"])){
+							login_check();
+					}
+					?>
 				</div>
 			</main>
 			<aside class="col-sm-3"></aside>
