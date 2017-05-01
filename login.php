@@ -3,7 +3,7 @@
 	<meta charset="utf-8">
 	<meta name="viewpoint" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href = "css/bootstrap.min.css">
-	<lenk rel="styleshhet" href = "./css/css.css">
+	<link rel="styleshhet" href = "./css/css.css">
 	</head>
 	<body>
 	<section class="container-fluid">
