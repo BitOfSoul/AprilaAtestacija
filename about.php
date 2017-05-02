@@ -76,7 +76,13 @@
             <div class="row content">
               <article>
                 <br><br>
-              <h1 class= "article-h1-black">CONTACT</h1>
+                  <h1 class= "article-h1-black">CONTACT</h1>
+                   <br>
+			              <p class= "content-white">Inese Putninja (Project Leader): 030797@inbox.lv</p>
+			               <p class= "content-white">Alex Muzichenko (Senior): almuz@inbox.lv</p>
+			                <p class= "content-white">Ruslan Nazarov (Junior): noahcore95@gmail.com</p>
+			                 <p class= "content-white">Ruslan Rezanov (Designer): ruslan.rezanov2013@gmail.com</p>
+                </article>
           </div>
         </div>
       </div>
