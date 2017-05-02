@@ -186,6 +186,13 @@ body, html {
   color: black;
 }
 
+
+.content-white{
+  font-family: sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
 .date{
   font-family: sans-serif;
   font-size: 12px;
